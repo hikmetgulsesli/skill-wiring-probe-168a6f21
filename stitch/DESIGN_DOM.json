@@ -1,0 +1,1774 @@
+{
+  "generatedAt": "2026-07-05T00:43:44.460Z",
+  "screenCount": 3,
+  "screens": {
+    "0712778be41c4da29f6b316df377d5f8": {
+      "screenId": "0712778be41c4da29f6b316df377d5f8",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "lg:flex",
+            "flex-col",
+            "h-full",
+            "fixed",
+            "left-0",
+            "top-0",
+            "py-lg",
+            "px-md",
+            "bg-surface-container-lowest"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-grow",
+            "lg:ml-64",
+            "w-full",
+            "min-h-screen",
+            "pb-xl"
+          ],
+          "childCount": 70
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "classes": [
+            "w-full",
+            "bg-secondary",
+            "text-on-secondary",
+            "font-button",
+            "text-button",
+            "py-sm",
+            "px-md",
+            "rounded",
+            "mb-lg",
+            "hover:bg-secondary-container-high",
+            "transition-colors",
+            "text-center"
+          ],
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-xs",
+            "px-sm",
+            "py-xs",
+            "text-on-surface-variant",
+            "font-button",
+            "text-button",
+            "hover:bg-surface-container",
+            "rounded",
+            "transition-colors"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export Summary",
+          "classes": [
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "px-md",
+            "py-xs",
+            "rounded",
+            "font-button",
+            "text-button",
+            "hover:bg-surface-container",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-surface"
+          ],
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe Ready",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "settings_input_component",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "View All",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button",
+            "text-secondary",
+            "hover:underline"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "settings_input_component",
+        "edit_note",
+        "analytics",
+        "settings",
+        "help",
+        "filter_list",
+        "trending_up",
+        "speed",
+        "warning",
+        "pending_actions",
+        "more_vert",
+        "lightbulb",
+        "info"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "secondary-fixed": "#89f5e7",
+        "secondary-container": "#86f2e4",
+        "on-error-container": "#93000a",
+        "error": "#ba1a1a",
+        "surface-bright": "#f8f9ff",
+        "outline-variant": "#c6c6cd",
+        "inverse-primary": "#bec6e0",
+        "surface-container-highest": "#d3e4fe",
+        "on-background": "#0b1c30",
+        "tertiary-fixed": "#e1e0ff",
+        "secondary": "#006a61",
+        "surface-container-high": "#dce9ff",
+        "surface-container-lowest": "#ffffff",
+        "on-primary-container": "#7c839b",
+        "inverse-surface": "#213145",
+        "on-secondary-fixed-variant": "#005049",
+        "on-tertiary-container": "#7073ff",
+        "surface-tint": "#565e74",
+        "on-primary-fixed": "#131b2e",
+        "surface-variant": "#d3e4fe",
+        "background": "#f8f9ff",
+        "on-surface-variant": "#45464d",
+        "on-primary-fixed-variant": "#3f465c",
+        "surface-container-low": "#eff4ff",
+        "inverse-on-surface": "#eaf1ff",
+        "tertiary": "#000000",
+        "secondary-fixed-dim": "#6bd8cb",
+        "tertiary-container": "#07006c",
+        "on-surface": "#0b1c30",
+        "primary": "#000000",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#2f2ebe",
+        "on-secondary-container": "#006f66",
+        "primary-fixed-dim": "#bec6e0",
+        "on-error": "#ffffff",
+        "primary-fixed": "#dae2fd",
+        "on-secondary": "#ffffff",
+        "surface-container": "#e5eeff",
+        "surface": "#f8f9ff",
+        "tertiary-fixed-dim": "#c0c1ff",
+        "outline": "#76777d",
+        "primary-container": "#131b2e",
+        "error-container": "#ffdad6",
+        "on-tertiary-fixed": "#07006c",
+        "on-primary": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "on-secondary-fixed": "#00201d"
+      },
+      "fonts": [
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "settings_input_component",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "View All",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export Summary",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe Ready",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe Ready",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "settings_input_component",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Insights - Skill Wiring Probe"
+    },
+    "7af7f8047d404045a21917756c794e33": {
+      "screenId": "7af7f8047d404045a21917756c794e33",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "flex",
+            "justify-between",
+            "items-center",
+            "h-[48px]",
+            "px-margin",
+            "w-full",
+            "fixed",
+            "top-0",
+            "z-50"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-full",
+            "w-64",
+            "fixed",
+            "left-0",
+            "top-0",
+            "py-lg",
+            "px-md"
+          ],
+          "childCount": 9
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "md:ml-64",
+            "mt-[48px]",
+            "md:mt-0",
+            "h-full",
+            "overflow-hidden",
+            "bg-background"
+          ],
+          "childCount": 40
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "search",
+          "classes": [
+            "text-on-surface-variant",
+            "p-sm",
+            "hover:bg-surface-container-low",
+            "transition-colors",
+            "rounded"
+          ],
+          "icon": "search",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/search",
+          "expectedRoute": "/search",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "menu",
+          "classes": [
+            "text-on-surface-variant",
+            "p-sm",
+            "hover:bg-surface-container-low",
+            "transition-colors",
+            "rounded"
+          ],
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-sm",
+            "bg-secondary",
+            "text-on-secondary",
+            "font-button",
+            "text-button",
+            "py-sm",
+            "px-md",
+            "rounded-lg",
+            "hover:bg-on-secondary-container",
+            "transition-colors",
+            "shadow-sm"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Back to Operations",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-xs",
+            "font-button",
+            "text-button"
+          ],
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Discard",
+          "classes": [
+            "px-md",
+            "py-sm",
+            "font-button",
+            "text-button",
+            "text-on-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "hover:bg-surface-container-low",
+            "transition-colors",
+            "bg-surface"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Record",
+          "classes": [
+            "px-md",
+            "py-sm",
+            "font-button",
+            "text-button",
+            "bg-secondary",
+            "text-on-secondary",
+            "rounded",
+            "hover:bg-on-secondary-container",
+            "transition-colors",
+            "shadow-sm",
+            "flex",
+            "items-center",
+            "gap-xs"
+          ],
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "Format JSON",
+          "classes": [
+            "font-button",
+            "text-button",
+            "text-secondary",
+            "hover:text-on-secondary-container",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-xs"
+          ],
+          "icon": "code",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "classes": [
+            "hover:text-error",
+            "transition-colors"
+          ],
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Tag",
+          "classes": [
+            "px-sm",
+            "py-xs",
+            "border",
+            "border-dashed",
+            "border-outline-variant",
+            "text-on-surface-variant",
+            "font-body-sm",
+            "rounded",
+            "hover:bg-surface-container",
+            "hover:text-on-surface",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-1"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe Ready",
+          "classes": [],
+          "icon": "cable",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "System Operator",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "text",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-sm",
+            "py-xs",
+            "font-body-md",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "transition-all"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "wss://...",
+          "placeholder": "wss://...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-error-container/20",
+            "border",
+            "border-error",
+            "rounded",
+            "px-sm",
+            "py-xs",
+            "font-body-md",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-error",
+            "focus:ring-1",
+            "focus:ring-error",
+            "transition-all",
+            "pr-10"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-sm",
+            "py-xs",
+            "font-body-md",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "transition-all",
+            "appearance-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "textarea",
+          "label": "textarea",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-full",
+            "bg-transparent",
+            "border-none",
+            "text-surface-bright",
+            "font-mono-label",
+            "resize-none",
+            "focus:ring-0",
+            "focus:outline-none",
+            "pl-10",
+            "pt-sm",
+            "leading-relaxed"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "checkbox",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "sr-only",
+            "peer"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "group-hover:text-secondary",
+            "transition-colors"
+          ],
+          "icon": "settings_input_component",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-on-secondary-container"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "group-hover:text-secondary",
+            "transition-colors"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[16px]",
+            "group-hover:text-on-surface",
+            "transition-colors"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[16px]",
+            "group-hover:text-on-surface",
+            "transition-colors"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "cable",
+        "search",
+        "menu",
+        "settings_input_component",
+        "edit_note",
+        "analytics",
+        "add",
+        "settings",
+        "help",
+        "arrow_back",
+        "pending",
+        "save",
+        "info",
+        "error",
+        "data_object",
+        "code",
+        "edit",
+        "update",
+        "tune",
+        "close"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCvjSl0hBdGteOxVIslhIJxsDMQGN8_TmpUPOAhfuYOmqttqcLcJHJJD1HUuxNRdPbnNW2NMRVTSsc-i4XGECAvN_QUFepcG5iL6ZOoMBz_QMY4jaXmCFzQOmnVxaMm_m7lXQlhvntyLHk4oMWCs6",
+          "alt": "System Operator"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "secondary-fixed": "#89f5e7",
+        "secondary-container": "#86f2e4",
+        "on-error-container": "#93000a",
+        "error": "#ba1a1a",
+        "surface-bright": "#f8f9ff",
+        "outline-variant": "#c6c6cd",
+        "inverse-primary": "#bec6e0",
+        "surface-container-highest": "#d3e4fe",
+        "on-background": "#0b1c30",
+        "tertiary-fixed": "#e1e0ff",
+        "secondary": "#006a61",
+        "surface-container-high": "#dce9ff",
+        "surface-container-lowest": "#ffffff",
+        "on-primary-container": "#7c839b",
+        "inverse-surface": "#213145",
+        "on-secondary-fixed-variant": "#005049",
+        "on-tertiary-container": "#7073ff",
+        "surface-tint": "#565e74",
+        "on-primary-fixed": "#131b2e",
+        "surface-variant": "#d3e4fe",
+        "background": "#f8f9ff",
+        "on-surface-variant": "#45464d",
+        "on-primary-fixed-variant": "#3f465c",
+        "surface-container-low": "#eff4ff",
+        "inverse-on-surface": "#eaf1ff",
+        "tertiary": "#000000",
+        "secondary-fixed-dim": "#6bd8cb",
+        "tertiary-container": "#07006c",
+        "on-surface": "#0b1c30",
+        "primary": "#000000",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#2f2ebe",
+        "on-secondary-container": "#006f66",
+        "primary-fixed-dim": "#bec6e0",
+        "on-error": "#ffffff",
+        "primary-fixed": "#dae2fd",
+        "on-secondary": "#ffffff",
+        "surface-container": "#e5eeff",
+        "surface": "#f8f9ff",
+        "tertiary-fixed-dim": "#c0c1ff",
+        "outline": "#76777d",
+        "primary-container": "#131b2e",
+        "error-container": "#ffdad6",
+        "on-tertiary-fixed": "#07006c",
+        "on-primary": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "on-secondary-fixed": "#00201d"
+      },
+      "fonts": [
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "1"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "settings_input_component",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "search",
+          "icon": "search",
+          "action": "navigate",
+          "route": "/search",
+          "expectedBehavior": "navigate:/search"
+        },
+        {
+          "kind": "button",
+          "label": "menu",
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Back to Operations",
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Discard",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Record",
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "Format JSON",
+          "icon": "code",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Tag",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe Ready",
+          "icon": "cable",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "System Operator",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "text",
+          "type": "text",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "wss://...",
+          "type": "text",
+          "placeholder": "wss://...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "textarea",
+          "type": "textarea",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "checkbox",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe Ready",
+          "icon": "cable",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "settings_input_component",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "icon": "add",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "System Operator",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Record Editor - Skill Wiring Probe"
+    },
+    "e2afe4f77c32449c83abce19e50ac06a": {
+      "screenId": "e2afe4f77c32449c83abce19e50ac06a",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "flex",
+            "justify-between",
+            "items-center",
+            "h-[48px]",
+            "px-margin",
+            "w-full",
+            "fixed",
+            "top-0",
+            "z-50",
+            "bg-surface"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "lg:flex",
+            "flex-col",
+            "h-full",
+            "fixed",
+            "left-0",
+            "top-0",
+            "py-lg",
+            "px-md",
+            "w-64"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "min-w-0",
+            "max-w-[1440px]",
+            "mx-auto",
+            "w-full"
+          ],
+          "childCount": 29
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "fixed",
+            "bottom-0",
+            "w-full",
+            "bg-surface",
+            "border-t",
+            "border-outline-variant",
+            "z-50",
+            "flex",
+            "justify-around"
+          ],
+          "childCount": 0
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "search",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:bg-surface-container-low",
+            "transition-colors",
+            "p-sm",
+            "rounded-DEFAULT"
+          ],
+          "icon": "search",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/search",
+          "expectedRoute": "/search",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "refresh",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:bg-surface-container-low",
+            "transition-colors",
+            "p-sm",
+            "rounded-DEFAULT"
+          ],
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "classes": [
+            "bg-secondary",
+            "text-on-secondary",
+            "font-button",
+            "text-button",
+            "h-[40px]",
+            "px-md",
+            "rounded-lg",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-sm",
+            "w-full",
+            "mb-lg",
+            "hover:bg-on-secondary-container",
+            "transition-colors",
+            "shadow-sm"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "classes": [
+            "text-on-surface",
+            "hover:bg-surface-container",
+            "p-xs",
+            "rounded-DEFAULT",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-xs"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "edit",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "opacity-0",
+            "group-hover:opacity-100",
+            "transition-opacity",
+            "p-xs"
+          ],
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "classes": [
+            "text-error",
+            "hover:bg-error-container",
+            "p-xs",
+            "rounded-DEFAULT",
+            "transition-colors",
+            "opacity-0",
+            "group-hover:opacity-100"
+          ],
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_left",
+          "classes": [
+            "p-xs",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "hover:bg-surface-container",
+            "disabled:opacity-50"
+          ],
+          "icon": "chevron_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_right",
+          "classes": [
+            "p-xs",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "hover:bg-surface-container"
+          ],
+          "icon": "chevron_right",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe",
+          "classes": [],
+          "icon": "settings_input_component",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#",
+          "expectedRoute": "#"
+        },
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Ready",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search records by ID, key, or tags...",
+          "placeholder": "Search records by ID, key, or tags...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "pl-xl",
+            "pr-sm",
+            "py-xs",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "text-body-sm",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "transition-shadow",
+            "text-on-surface"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "checkbox",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "rounded-DEFAULT",
+            "border-outline-variant",
+            "text-secondary",
+            "focus:ring-secondary"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "settings_input_component",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-button"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Ops",
+          "href": "#",
+          "classes": [
+            "font-button",
+            "text-[10px]",
+            "mt-0.5"
+          ],
+          "icon": "settings_input_component",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "settings_input_component",
+        "search",
+        "refresh",
+        "add",
+        "edit_note",
+        "analytics",
+        "settings",
+        "help",
+        "filter_list",
+        "check_circle",
+        "warning",
+        "edit",
+        "chevron_left",
+        "chevron_right"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCLxExM80Y04Vlm9sRD2He3B1S6WbD-fl-CkbbXa6HJCzd9cCqXHEMvc52_UGprjBLBIsZI_zifA8w3Ge3N9tiEolPP3MVG6loaE2WXHOQnFwJFpc2v0sQSfwKftIW8iygs_UKqerfTZSsLVkmtjj",
+          "alt": "A small circular avatar placeholder image with a generic system icon, light mode color scheme, crisp vector style, subtle gradient background."
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "secondary-fixed": "#89f5e7",
+        "secondary-container": "#86f2e4",
+        "on-error-container": "#93000a",
+        "error": "#ba1a1a",
+        "surface-bright": "#f8f9ff",
+        "outline-variant": "#c6c6cd",
+        "inverse-primary": "#bec6e0",
+        "surface-container-highest": "#d3e4fe",
+        "on-background": "#0b1c30",
+        "tertiary-fixed": "#e1e0ff",
+        "secondary": "#006a61",
+        "surface-container-high": "#dce9ff",
+        "surface-container-lowest": "#ffffff",
+        "on-primary-container": "#7c839b",
+        "inverse-surface": "#213145",
+        "on-secondary-fixed-variant": "#005049",
+        "on-tertiary-container": "#7073ff",
+        "surface-tint": "#565e74",
+        "on-primary-fixed": "#131b2e",
+        "surface-variant": "#d3e4fe",
+        "background": "#f8f9ff",
+        "on-surface-variant": "#45464d",
+        "on-primary-fixed-variant": "#3f465c",
+        "surface-container-low": "#eff4ff",
+        "inverse-on-surface": "#eaf1ff",
+        "tertiary": "#000000",
+        "secondary-fixed-dim": "#6bd8cb",
+        "tertiary-container": "#07006c",
+        "on-surface": "#0b1c30",
+        "primary": "#000000",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#2f2ebe",
+        "on-secondary-container": "#006f66",
+        "primary-fixed-dim": "#bec6e0",
+        "on-error": "#ffffff",
+        "primary-fixed": "#dae2fd",
+        "on-secondary": "#ffffff",
+        "surface-container": "#e5eeff",
+        "surface": "#f8f9ff",
+        "tertiary-fixed-dim": "#c0c1ff",
+        "outline": "#76777d",
+        "primary-container": "#131b2e",
+        "error-container": "#ffdad6",
+        "on-tertiary-fixed": "#07006c",
+        "on-primary": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "on-secondary-fixed": "#00201d"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "settings_input_component",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Ops",
+          "icon": "settings_input_component",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "search",
+          "icon": "search",
+          "action": "navigate",
+          "route": "/search",
+          "expectedBehavior": "navigate:/search"
+        },
+        {
+          "kind": "button",
+          "label": "refresh",
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "edit",
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_left",
+          "icon": "chevron_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_right",
+          "icon": "chevron_right",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe",
+          "icon": "settings_input_component",
+          "action": "navigate",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Ready",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search records by ID, key, or tags...",
+          "type": "text",
+          "placeholder": "Search records by ID, key, or tags...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "checkbox",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe",
+          "icon": "settings_input_component",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "search",
+          "icon": "search",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "refresh",
+          "icon": "refresh",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Skill Wiring Probe",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Ready",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "icon": "add",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "settings_input_component",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Ops",
+          "icon": "settings_input_component",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Record Operations - Skill Wiring Probe"
+    }
+  }
+}

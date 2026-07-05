@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-background dark:bg-background" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Record Editor - Skill Wiring Probe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#89f5e7",
+                        "secondary-container": "#86f2e4",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f8f9ff",
+                        "outline-variant": "#c6c6cd",
+                        "inverse-primary": "#bec6e0",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-background": "#0b1c30",
+                        "tertiary-fixed": "#e1e0ff",
+                        "secondary": "#006a61",
+                        "surface-container-high": "#dce9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#7c839b",
+                        "inverse-surface": "#213145",
+                        "on-secondary-fixed-variant": "#005049",
+                        "on-tertiary-container": "#7073ff",
+                        "surface-tint": "#565e74",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-variant": "#d3e4fe",
+                        "background": "#f8f9ff",
+                        "on-surface-variant": "#45464d",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container-low": "#eff4ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "tertiary": "#000000",
+                        "secondary-fixed-dim": "#6bd8cb",
+                        "tertiary-container": "#07006c",
+                        "on-surface": "#0b1c30",
+                        "primary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "on-secondary-container": "#006f66",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "surface": "#f8f9ff",
+                        "tertiary-fixed-dim": "#c0c1ff",
+                        "outline": "#76777d",
+                        "primary-container": "#131b2e",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#07006c",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#cbdbf5",
+                        "on-secondary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "margin": "24px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "display": ["Inter", "sans-serif"],
+                        "headline": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "mono-label": ["JetBrains Mono", "monospace"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "button": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "display": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "mono-label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom scrollbar for data density */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.surface-container');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant');
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline');
+        }
+    </style>
+</head>
+<body class="h-full flex overflow-hidden font-body-md text-on-surface bg-surface antialiased">
+<!-- TopNavBar (Mobile Only) -->
+<header class="md:hidden flex justify-between items-center h-[48px] px-margin w-full fixed top-0 z-50 bg-surface border-b border-outline-variant flat no shadows">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="cable">cable</span>
+<span class="font-display text-display font-semibold text-on-surface">Skill Wiring Probe</span>
+</div>
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant p-sm hover:bg-surface-container-low transition-colors rounded">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-on-surface-variant p-sm hover:bg-surface-container-low transition-colors rounded">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden md:flex flex-col h-full w-64 fixed left-0 top-0 py-lg px-md bg-surface-container-lowest border-r border-outline-variant z-40 flat no shadows">
+<!-- Brand Area -->
+<div class="mb-xl px-sm flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="cable" data-weight="fill" style="font-variation-settings: 'FILL' 1;">cable</span>
+<div>
+<h1 class="font-headline text-headline font-bold text-on-surface tracking-tight">Skill Wiring Probe</h1>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+                    Ready
+                </div>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 flex flex-col gap-sm">
+<!-- Inactive -->
+<a class="flex items-center gap-md px-md py-sm font-button text-button text-on-surface-variant hover:bg-surface-container hover:bg-surface-container-high transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary transition-colors" data-icon="settings_input_component">settings_input_component</span>
+                Operations
+            </a>
+<!-- Active (Editor) -->
+<a class="flex items-center gap-md px-md py-sm font-button text-button bg-secondary-container text-on-secondary-container rounded-lg Active: scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="edit_note" data-weight="fill" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+                Editor
+            </a>
+<!-- Inactive -->
+<a class="flex items-center gap-md px-md py-sm font-button text-button text-on-surface-variant hover:bg-surface-container hover:bg-surface-container-high transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary transition-colors" data-icon="analytics">analytics</span>
+                Insights
+            </a>
+</div>
+<!-- Create CTA -->
+<div class="mt-auto mb-lg">
+<button class="w-full flex items-center justify-center gap-sm bg-secondary text-on-secondary font-button text-button py-sm px-md rounded-lg hover:bg-on-secondary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+                Create Record
+            </button>
+</div>
+<!-- Footer Links -->
+<div class="flex flex-col gap-xs pt-md border-t border-outline-variant">
+<a class="flex items-center gap-md px-sm py-xs font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container rounded group" href="#">
+<span class="material-symbols-outlined text-[16px] group-hover:text-on-surface transition-colors" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-md px-sm py-xs font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container rounded group" href="#">
+<span class="material-symbols-outlined text-[16px] group-hover:text-on-surface transition-colors" data-icon="help">help</span>
+                Support
+            </a>
+<!-- User Profile Snippet -->
+<div class="mt-md px-sm flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container font-mono-label border border-outline-variant overflow-hidden">
+<img alt="System Operator" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvjSl0hBdGteOxVIslhIJxsDMQGN8_TmpUPOAhfuYOmqttqcLcJHJJD1HUuxNRdPbnNW2NMRVTSsc-i4XGECAvN_QUFepcG5iL6ZOoMBz_QMY4jaXmCFzQOmnVxaMm_m7lXQlhvntyLHk4oMWCs6vyDA09rxIGMrVMDHlaTcZuG7Rm2BMwazoQyQfBUNijHosKE2jwUQmW-GkkQKaMD-InPV-HWy7bwb6v6GSKR4FjMl66E82qpesfVKee4qt6J2W0OB6jSz2PO8RB"/>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">System Operator</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col md:ml-64 mt-[48px] md:mt-0 h-full overflow-hidden bg-background">
+<!-- Utility Toolbar / Header -->
+<div class="h-[48px] bg-surface flex items-center justify-between px-margin border-b border-outline-variant shrink-0 z-10 relative">
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-xs font-button text-button">
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_back">arrow_back</span>
+                    Back to Operations
+                </button>
+<div class="h-4 w-px bg-outline-variant mx-sm"></div>
+<h2 class="font-headline text-headline text-on-surface">Edit Record: <span class="font-mono-label text-mono-label text-secondary px-sm py-xs bg-surface-container rounded ml-xs">REC-8492-AX</span></h2>
+</div>
+<div class="flex items-center gap-md">
+<!-- Unsaved Indicator -->
+<div class="flex items-center gap-xs text-amber-600 bg-amber-50 px-sm py-xs rounded font-body-sm text-body-sm border border-amber-200">
+<span class="material-symbols-outlined text-[16px]" data-icon="pending">pending</span>
+                    Unsaved Changes
+                </div>
+<!-- Actions -->
+<button class="px-md py-sm font-button text-button text-on-surface border border-outline-variant rounded hover:bg-surface-container-low transition-colors bg-surface">
+                    Discard
+                </button>
+<button class="px-md py-sm font-button text-button bg-secondary text-on-secondary rounded hover:bg-on-secondary-container transition-colors shadow-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="save" data-weight="fill" style="font-variation-settings: 'FILL' 1;">save</span>
+                    Save Record
+                </button>
+</div>
+</div>
+<!-- Scrollable Form Area -->
+<div class="flex-1 overflow-y-auto p-margin relative">
+<!-- Bento Layout for Form -->
+<div class="max-w-[1000px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Configuration Panel (Left/Top) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Basic Info Card -->
+<div class="bg-surface rounded border border-outline-variant p-lg shadow-sm">
+<h3 class="font-headline text-headline text-on-surface mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="info">info</span>
+                            Primary Configuration
+                        </h3>
+<div class="flex flex-col gap-md">
+<!-- Input: Record Name -->
+<div>
+<label class="block font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider mb-xs">Record Identifier <span class="text-error">*</span></label>
+<input class="w-full bg-surface border border-outline-variant rounded px-sm py-xs font-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" type="text" value="Alpha_Node_Sync_Protocol"/>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Unique alphanumeric identifier for system routing.</p>
+</div>
+<!-- Input: Target Endpoint (Error State Example) -->
+<div>
+<label class="block font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider mb-xs">Target Endpoint URI <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full bg-error-container/20 border border-error rounded px-sm py-xs font-body-md text-on-surface focus:outline-none focus:border-error focus:ring-1 focus:ring-error transition-all pr-10" placeholder="wss://..." type="text" value=""/>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-error" data-icon="error">error</span>
+</div>
+<p class="font-body-sm text-body-sm text-error mt-xs flex items-center gap-1">
+                                    Target Endpoint cannot be empty for active records.
+                                </p>
+</div>
+<!-- Grid for smaller inputs -->
+<div class="grid grid-cols-2 gap-gutter">
+<div>
+<label class="block font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider mb-xs">Protocol Version</label>
+<select class="w-full bg-surface border border-outline-variant rounded px-sm py-xs font-body-md text-on-surface focus:outline-none focus:border-secondary transition-all appearance-none">
+<option>v2.4.1 (Stable)</option>
+<option>v2.5.0-rc1</option>
+<option>v1.9.9 (Legacy)</option>
+</select>
+</div>
+<div>
+<label class="block font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider mb-xs">Execution Priority</label>
+<select class="w-full bg-surface border border-outline-variant rounded px-sm py-xs font-body-md text-on-surface focus:outline-none focus:border-secondary transition-all appearance-none">
+<option>High (0-1)</option>
+<option selected="">Standard (2-5)</option>
+<option>Background (6-9)</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Payload Schema Card -->
+<div class="bg-surface rounded border border-outline-variant shadow-sm flex flex-col h-full min-h-[300px]">
+<div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface-container-low rounded-t">
+<h3 class="font-headline text-headline text-on-surface flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="data_object">data_object</span>
+                                Payload Schema Definition
+                            </h3>
+<button class="font-button text-button text-secondary hover:text-on-secondary-container transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="code">code</span>
+                                Format JSON
+                            </button>
+</div>
+<div class="flex-1 p-sm bg-inverse-surface rounded-b relative font-mono-label text-mono-label text-surface-bright overflow-hidden">
+<!-- Line numbers simulated for dense UI feel -->
+<div class="absolute left-0 top-0 bottom-0 w-8 bg-[#1e293b] border-r border-[#334155] text-[#64748b] text-right pr-2 py-sm flex flex-col font-mono-label">
+<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+</div>
+<textarea class="w-full h-full bg-transparent border-none text-surface-bright font-mono-label resize-none focus:ring-0 focus:outline-none pl-10 pt-sm leading-relaxed" spellcheck="false">{
+  "sync_interval_ms": 5000,
+  "retry_strategy": "exponential_backoff",
+  "max_retries": 3,
+  "data_mapping": {
+    "source_id": "$.system.uuid",
+    "status_flag": "$.health.ok"
+  }
+}
+                            </textarea>
+</div>
+</div>
+</div>
+<!-- Metadata & Toggles Panel (Right/Side) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Status Tile (High Density) -->
+<div class="bg-surface rounded border border-outline-variant p-md shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-[4px] bg-amber-500"></div>
+<h4 class="font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider mb-sm pl-sm">Current State</h4>
+<div class="pl-sm">
+<div class="flex items-center justify-between mb-xs">
+<span class="font-body-md text-on-surface font-semibold">Draft (Modified)</span>
+<span class="material-symbols-outlined text-amber-600" data-icon="edit">edit</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-xs mt-sm pt-sm border-t border-outline-variant">
+<span class="material-symbols-outlined text-[14px]" data-icon="update">update</span>
+                                Last edit: 2 mins ago by operator_sys
+                            </div>
+</div>
+</div>
+<!-- Operational Flags Card -->
+<div class="bg-surface rounded border border-outline-variant p-md shadow-sm">
+<h3 class="font-headline text-headline text-on-surface mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="tune">tune</span>
+                            Execution Flags
+                        </h3>
+<div class="flex flex-col gap-md">
+<!-- Toggle Item 1 -->
+<label class="flex items-start justify-between cursor-pointer group">
+<div class="pr-sm">
+<span class="block font-body-md font-medium text-on-surface group-hover:text-secondary transition-colors">Enable Telemetry</span>
+<span class="block font-body-sm text-on-surface-variant mt-xs">Send execution metrics to insights datastore.</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</div>
+</label>
+<!-- Toggle Item 2 -->
+<label class="flex items-start justify-between cursor-pointer group pt-md border-t border-outline-variant">
+<div class="pr-sm">
+<span class="block font-body-md font-medium text-on-surface group-hover:text-secondary transition-colors">Strict Schema Validation</span>
+<span class="block font-body-sm text-on-surface-variant mt-xs">Reject payloads not matching definition exactly.</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</div>
+</label>
+<!-- Toggle Item 3 -->
+<label class="flex items-start justify-between cursor-pointer group pt-md border-t border-outline-variant opacity-75">
+<div class="pr-sm">
+<span class="block font-body-md font-medium text-on-surface">Auto-Retry on Timeout</span>
+<span class="block font-body-sm text-on-surface-variant mt-xs">Requires specific endpoint configuration.</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input class="sr-only peer" disabled="" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant/50 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary/50"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Environment Labels -->
+<div class="bg-surface rounded border border-outline-variant p-md shadow-sm">
+<h4 class="font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider mb-sm">Tags &amp; Routing</h4>
+<div class="flex flex-wrap gap-xs">
+<span class="px-sm py-xs bg-surface-container text-on-surface font-body-sm rounded border border-outline-variant flex items-center gap-1">
+                                 env:production
+                                 <button class="hover:text-error transition-colors"><span class="material-symbols-outlined text-[14px]" data-icon="close">close</span></button>
+</span>
+<span class="px-sm py-xs bg-surface-container text-on-surface font-body-sm rounded border border-outline-variant flex items-center gap-1">
+                                 node:alpha_cluster
+                                 <button class="hover:text-error transition-colors"><span class="material-symbols-outlined text-[14px]" data-icon="close">close</span></button>
+</span>
+<button class="px-sm py-xs border border-dashed border-outline-variant text-on-surface-variant font-body-sm rounded hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="add">add</span> Add Tag
+                             </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Spacing for scroll area -->
+<div class="h-xl"></div>
+</div>
+</main>
+</body></html>
